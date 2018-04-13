@@ -36,7 +36,7 @@ class Login extends PureComponent{
 			<View style={styles.View}>
 			  <Text style={{textAlign:'center', fontSize:20, marginTop:20, color:'#b3b3b3'}}>Log In</Text>
 				<TextInput 
-					placeholder="Alamat Email" 
+					placeholder="Email Address" 
 					onChangeText={this.handleChangeEmail} 
 					value={this.state.username} 
 					style={styles.username}
