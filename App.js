@@ -12,12 +12,12 @@ import {
   View
 } from 'react-native';
 
-import SignUp from './component/screenSignUp/signUp'
+import ForgotPassword from './component/forgotpassword/forgotPassword'
 
 export default class App extends Component {
   render() {
     return (
-     <SignUp />
+     <ForgotPassword />
     );
   }
 }
