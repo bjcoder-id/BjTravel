@@ -22,20 +22,24 @@ class ForgotPassword extends PureComponent{
 	}
 	render(){
 		return(
-			<View>
+			<View style={styles.view}>
 			 <Text style={{textAlign:'center', fontSize:20, marginTop:20, color:'#b3b3b3'}}>Change Your Password</Text>
-			 <TextInput
-				placeholder="Email Address"
-				onChangeText={this.onPressForgot} 
-				value={this.state.password}
-				style={styles.textInput}
-			 />
-			 <TouchableOpacity
-				onPress={this.onPress} 
-				style={styles.button}
-			 >
-			   <Text style={{color:'#fff', fontSize:16}}>{this.state.text}</Text>
-			 </TouchableOpacity>
+			 	<View style={styles.view1}>
+			 		<TextInput
+						placeholder="Email Address"
+						underlineColorAndroid="rgba(0,0,0,0)"
+						keyboardType="email-address"
+						onChangeText={this.onPressForgot} 
+						value={this.state.password}
+						style={styles.textInput}
+			 		/>
+			 		<TouchableOpacity
+						onPress={this.onPress} 
+						style={styles.button}
+			 		>
+			 		  <Text style={{color:'#fff', fontSize:16}}>{this.state.text}</Text>
+			 		</TouchableOpacity>
+			 	</View>
 			</View>
 		)
 	}
@@ -44,13 +48,23 @@ class ForgotPassword extends PureComponent{
 const styles = StyleSheet.create({
 	view: {
 		backgroundColor:'#99ddff',
-		flex:1
+		flex:1,
+	},
+	view1: {
+		backgroundColor:'#99ddff',
+		flex:1,
+		alignItems:'center',
+		marginTop:100
+		
 	},
 	textInput: {
-		marginTop:30,
 		marginRight:40,
 		marginLeft:40,
 		fontSize:16,
+		width:300,
+		backgroundColor:'grey',
+		borderRadius:10,
+		paddingHorizontal:10
 	},
 	button: {
 		marginTop:15,
