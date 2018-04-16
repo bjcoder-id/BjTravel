@@ -34,17 +34,21 @@ class Login extends PureComponent{
 	render(){
 		return(
 			<View style={styles.View}>
-			  <Text style={{textAlign:'center', fontSize:20, marginTop:20, color:'#b3b3b3'}}>Log In</Text>
+			  <Text style={{textAlign:'center', fontSize:25, marginTop:20, color:'#b3b3b3'}}>Log In</Text>
 				<TextInput 
 					placeholder="Email Address" 
 					onChangeText={this.handleChangeEmail} 
+					keyboardType="email-address"
+					underlineColorAndroid="rgba(0,0,0,0)"
 					value={this.state.username} 
 					style={styles.username}
 				/>
 				<TextInput 
 					placeholder="Password" 
 					onChangeText={this.handleChangePassword}
+					underlineColorAndroid="rgba(0,0,0,0)"
 					value={this.state.password}
+					secureTextEntry={true}
 					style={styles.password}
 				/>
 				
@@ -69,12 +73,18 @@ const styles = StyleSheet.create({
 		marginRight:40,
 		marginLeft:40,
 		fontSize:16,
+		backgroundColor:'grey',
+		borderRadius:10,
+		paddingHorizontal:20
 	},
 	password: {
 		marginTop:15,
 		marginRight:40,
 		marginLeft:40,
 		fontSize:16,
+		backgroundColor:'grey',
+		borderRadius:10,
+		paddingHorizontal:20
 	},
 	button: {
 		marginTop:15,
